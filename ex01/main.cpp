@@ -6,26 +6,7 @@
 
 int main ()
 {
-	//Contact	tab_contacts[8];
-
 	Phonebook phonebook;
-
-	//Contact Contact0("Coindreau", "François-Xavier", "FX", "076/654.54.44", "I am Batman");
-	//Contact Contact1("Coindreau", "François-Xavier", "FX", "076/303.70.88", "I am Batman");
-
-	//Contact0.displayContact();
-
-	//tab_contacts[0].displayContact();
-
-	//std::cout << Contact::get_nbContacts() ;
-
-	// Contact		simon;
-
-	// simon.setFirstName("CO");
-	// simon.setDarkestSecret("COOL");
-
-	// simon.display_contact();
-
 
 	phonebook.modifyContact("Coind", "Franc", "FX", "1", "Im batman");
 	phonebook.modifyContact("Coind", "Franc", "FX", "2", "Im batman");
@@ -39,17 +20,37 @@ int main ()
 	phonebook.modifyContact("CoindreauCoindreau", "Franc", "FX[poopodsfgpsdfg]", "9", "Im batman");
 
 
-	phonebook.display_list();
-	std::cout << phonebook.get_nbContacts() << std::endl;
+	// phonebook.display_list();
+	// std::cout << phonebook.get_nbContacts() << std::endl;
 
+	//std::cin.ignore();
 	std::string prompt;
-	std::cin >> prompt; 
+	//std::getline(std::cin, prompt);
 
 	while (42)
 	{
+		std::getline(std::cin, prompt);
+		std::cout << prompt << std::endl;
 		if (prompt == "SEARCH")
 		{
-			std::cout << "SEARCH" << std::endl;
+			//std::cout << "SEARCH" << std::endl;
+			phonebook.display_list();
+
+			/*std::cout << "Choose an id" << std::endl;
+			std::getline(std::cin, prompt);
+			while (42)
+			{
+				if (prompt.length() == 1)
+				{
+					long int test;
+					test = std::stoi(prompt);
+
+				}
+
+
+			}*/
+
+
 		}
 		if (prompt == "ADD")
 		{
@@ -60,7 +61,6 @@ int main ()
 		{
 			return (0);
 		}
-		std::cin >> prompt;
 	}
 
 

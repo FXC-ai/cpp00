@@ -50,8 +50,6 @@ void Phonebook::display_list(void)
 		std::cout << std::setw(10) << std::setfill(' ') << std::right << i << "|";
 		this->tab_contact[i].display_short();
 	}
-
-
 }
 
 void Phonebook::display_contact(int index)
