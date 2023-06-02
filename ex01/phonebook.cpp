@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "phonebook.hpp"
 
 int	Phonebook::_nbContacts = 0;
@@ -35,11 +36,25 @@ void Phonebook::modifyContact
 	this->tab_contact[Phonebook::_nbContacts].setPhoneNumber(phoneNumber);
 	this->tab_contact[Phonebook::_nbContacts].setDarkestSecret(darkestSecret);
 	Phonebook::_nbContacts++;
+	Phonebook::_nbContacts %= 8;
+}
+
+void Phonebook::display_list(void)
+{
+	int i;
+
+	std::cout << "Index     |First Name|Last Name |NickName  |" << std::endl;
+
+	for (i =0; i < 8; i++)
+	{
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << i << "|";
+		this->tab_contact[i].display_short();
+	}
+
+
 }
 
 void Phonebook::display_contact(int index)
 {
 	this->tab_contact[index].display();
-
-
 }

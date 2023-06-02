@@ -26,20 +26,20 @@ int main ()
 
 	// simon.display_contact();
 
-	std::cout << phonebook.get_nbContacts() << std::endl;
+
+	phonebook.modifyContact("Coind", "Franc", "FX", "1", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "2", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "3", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "4", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "5", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "6", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "7", "Im batman");
+	phonebook.modifyContact("Coind", "Franc", "FX", "8", "Im batman");
+	phonebook.modifyContact("CoindreauCoindreau", "Franc", "FX", "9", "Im batman");
+	phonebook.modifyContact("CoindreauCoindreau", "Franc", "FX[poopodsfgpsdfg]", "9", "Im batman");
 
 
-	phonebook.modifyContact("Coind", "Franc", "FX", "076", "Im batman");
-
-	phonebook.display_contact(0);
-	phonebook.display_contact(1);
-
-	std::cout << phonebook.get_nbContacts() << std::endl;
-
-	phonebook.modifyContact("Coind", "Franc", "FX", "076", "Im batman");
-
-	phonebook.display_contact(1);
-
+	phonebook.display_list();
 	std::cout << phonebook.get_nbContacts() << std::endl;
 
 	std::string prompt;

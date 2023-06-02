@@ -65,10 +65,37 @@ std::string	Contact::getDarkestSecret(void)
 	return this->_darkestSecret;
 }
 
-// void Contact::display_short(void)
-// {
-// 	std::cout << std::setw(10) << std::setfill(' ') << std::right << truncateAndAddDot() << " | 	";
-// }
+void Contact::display_short(void)
+{
+	if (this->_firstName.length() > 10)
+	{			
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_firstName.substr(0,9) + "." << "|";
+	}
+	else
+	{
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_firstName << "|";
+	}
+	
+	if (this->_lastName.length() > 10)
+	{			
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_lastName.substr(0,9) + "." << "|";
+	}
+	else
+	{
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_lastName << "|";
+	}
+
+	if (this->_nickName.length() > 10)
+	{			
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_nickName.substr(0,9) + "." << "|" <<std::endl;
+	}
+	else
+	{
+		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_nickName << "|" <<std::endl;
+	}
+
+	//std::cout << std::setw(10) << std::setfill(' ') << std::right <<  << " | 	";
+}
 
 void Contact::display(void)
 {

@@ -21,7 +21,7 @@ class Contact
 		std::string	getDarkestSecret(void);
 
 
-		//void	display_short(void);
+		void	display_short(void);
 		void	display(void);
 
 	private:
