@@ -3,6 +3,7 @@
 //#include "simonContact.hpp"
 #include <iostream>
 #include <string>
+#include <stdio.h>
 
 int main ()
 {
@@ -36,19 +37,31 @@ int main ()
 			//std::cout << "SEARCH" << std::endl;
 			phonebook.display_list();
 
-			/*std::cout << "Choose an id" << std::endl;
-			std::getline(std::cin, prompt);
+			std::cout << "Choose an id" << std::endl;
 			while (42)
 			{
+				std::getline(std::cin, prompt);
 				if (prompt.length() == 1)
 				{
-					long int test;
-					test = std::stoi(prompt);
 
+					/*
+					IL FAUT VERIFIER QUE CEST UN NOMBRE
+					S ASSSURER DU NOMBRE DE CONTACT ENREGISTRE
+					
+					*/
+					std::cout << "ouioui" << phonebook.get_nbContacts() <<std::endl;
+
+					long int id;
+					id = std::stoi(prompt);
+					if (id < phonebook.get_nbContacts())
+					{
+						std::cout << "oui l id" << std::endl;
+
+					}
+
+					//printf("test = %ld\n",test);
 				}
-
-
-			}*/
+			}
 
 
 		}

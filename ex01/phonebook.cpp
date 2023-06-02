@@ -3,6 +3,7 @@
 #include "phonebook.hpp"
 
 int	Phonebook::_nbContacts = 0;
+int	Phonebook::_totalContacts = 0;
 
 Phonebook::Phonebook(void)
 {

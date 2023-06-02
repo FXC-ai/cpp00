@@ -16,6 +16,7 @@ class Phonebook
 	private:
 		Contact tab_contact[8];
 		static int _nbContacts;
+		static int _totalContacts;
 
 };
 
