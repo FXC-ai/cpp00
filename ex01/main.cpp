@@ -21,7 +21,7 @@ std::string	get_and_set_variable (std::string varName)
 	return prompt;
 }
 
-int main ()
+int main (void)
 {
 	PhoneBook phonebook;
 	std::string prompt;

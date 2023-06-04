@@ -1,5 +1,3 @@
-#include <iostream>
-#include <iomanip>
 #include "PhoneBook.hpp"
 
 int	PhoneBook::_nbContacts = 0;
@@ -24,7 +22,6 @@ int PhoneBook::get_totalContacts(void)
 {
 	return PhoneBook::_totalContacts;
 }
-
 
 void PhoneBook::modifyContact
 (
