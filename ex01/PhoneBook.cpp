@@ -39,7 +39,10 @@ void PhoneBook::modifyContact
 	this->tab_contact[PhoneBook::_nbContacts].setDarkestSecret(darkestSecret);
 	PhoneBook::_nbContacts++;
 	PhoneBook::_nbContacts %= 8;
-	PhoneBook::_totalContacts++;
+	if (PhoneBook::_totalContacts < 8)
+	{
+		PhoneBook::_totalContacts++;
+	}
 }
 
 void PhoneBook::display_list(void)

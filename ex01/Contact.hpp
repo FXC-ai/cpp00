@@ -20,7 +20,6 @@ class Contact
 		std::string	getPhoneNumber(void);
 		std::string	getDarkestSecret(void);
 
-
 		void	display_short(void);
 		void	display(void);
 
