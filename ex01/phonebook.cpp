@@ -20,6 +20,12 @@ int Phonebook::get_nbContacts(void)
 	return Phonebook::_nbContacts;
 }
 
+int Phonebook::get_totalContacts(void)
+{
+	return Phonebook::_totalContacts;
+}
+
+
 void Phonebook::modifyContact
 (
 	std::string firstName, 
@@ -36,6 +42,7 @@ void Phonebook::modifyContact
 	this->tab_contact[Phonebook::_nbContacts].setDarkestSecret(darkestSecret);
 	Phonebook::_nbContacts++;
 	Phonebook::_nbContacts %= 8;
+	Phonebook::_totalContacts++;
 }
 
 void Phonebook::display_list(void)
