@@ -7,13 +7,11 @@ int	Phonebook::_totalContacts = 0;
 
 Phonebook::Phonebook(void)
 {
-	std::cout << "Phonebook constructor called" <<std::endl;
 	return;
 }
 
 Phonebook::~Phonebook(void)
 {
-	std::cout << "Phonebook destructor called" <<std::endl;
 	return;
 }
 
@@ -21,12 +19,6 @@ int Phonebook::get_nbContacts(void)
 {
 	return Phonebook::_nbContacts;
 }
-
-int Phonebook::get_totalContacts(void)
-{
-	return Phonebook::_totalContacts;
-}
-
 
 void Phonebook::modifyContact
 (
@@ -44,10 +36,6 @@ void Phonebook::modifyContact
 	this->tab_contact[Phonebook::_nbContacts].setDarkestSecret(darkestSecret);
 	Phonebook::_nbContacts++;
 	Phonebook::_nbContacts %= 8;
-	if (Phonebook::_totalContacts < 8)
-	{
-		Phonebook::_totalContacts++;
-	}
 }
 
 void Phonebook::display_list(void)
@@ -56,7 +44,7 @@ void Phonebook::display_list(void)
 
 	std::cout << "Index     |First Name|Last Name |NickName  |" << std::endl;
 
-	for (i =0; i < Phonebook::_totalContacts; i++)
+	for (i =0; i < 8; i++)
 	{
 		std::cout << std::setw(10) << std::setfill(' ') << std::right << i << "|";
 		this->tab_contact[i].display_short();

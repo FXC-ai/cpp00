@@ -4,13 +4,11 @@
 
 Contact::Contact(void)
 {
-	std::cout << "Contact created" << std::endl;
 	return ;
 }
 
 Contact::~Contact(void)
 {
-	std::cout << "Contact Destructor called" <<std::endl;
 	return;
 }
 
@@ -92,8 +90,6 @@ void Contact::display_short(void)
 	{
 		std::cout << std::setw(10) << std::setfill(' ') << std::right << this->_nickName << "|" <<std::endl;
 	}
-
-	//std::cout << std::setw(10) << std::setfill(' ') << std::right <<  << " | 	";
 }
 
 void Contact::display(void)
@@ -104,4 +100,3 @@ void Contact::display(void)
 	std::cout << "  Phone Number : " << this->_phoneNumber << std::endl;
 	std::cout << "Darkest Secret : " << this->_darkestSecret << std::endl;
 }
-
