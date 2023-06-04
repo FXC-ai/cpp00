@@ -12,6 +12,7 @@ class Phonebook
 		int get_nbContacts(void);
 		void display_contact(int index);
 		void display_list(void);
+		int get_totalContacts(void);
 
 	private:
 		Contact tab_contact[8];
