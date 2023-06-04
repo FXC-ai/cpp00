@@ -1,13 +1,13 @@
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
-class Phonebook 
+class PhoneBook 
 {
 	public:
-		Phonebook(void);
-		~Phonebook(void);
+		PhoneBook(void);
+		~PhoneBook(void);
 		void modifyContact(std::string firstName, std::string lastName, std::string nickName, std::string phoneNumber, std::string darkestSecret);
 		int get_nbContacts(void);
 		void display_contact(int index);

@@ -1,10 +1,8 @@
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
-
 
 std::string	get_and_set_variable (std::string varName)
 {
@@ -25,7 +23,7 @@ std::string	get_and_set_variable (std::string varName)
 
 int main ()
 {
-	Phonebook phonebook;
+	PhoneBook phonebook;
 	std::string prompt;
 	long int id;
 
