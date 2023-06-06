@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcoindre <fcoindre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/06 11:41:15 by fcoindre          #+#    #+#             */
+/*   Updated: 2023/06/06 11:41:20 by fcoindre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 
 int	PhoneBook::_nbContacts = 0;
@@ -51,7 +63,7 @@ void PhoneBook::display_list(void)
 
 	std::cout << "Index     |First Name|Last Name |NickName  |" << std::endl;
 
-	for (i =0; i < 8; i++)
+	for (i = 0; i < PhoneBook::_totalContacts; i++)
 	{
 		std::cout << std::setw(10) << std::setfill(' ') << std::right << i << "|";
 		this->tab_contact[i].display_short();
