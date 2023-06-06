@@ -6,7 +6,7 @@
 /*   By: fcoindre <fcoindre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 11:44:45 by fcoindre          #+#    #+#             */
-/*   Updated: 2023/06/06 11:45:11 by fcoindre         ###   ########.fr       */
+/*   Updated: 2023/06/06 11:59:54 by fcoindre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ std::string	get_and_set_variable (std::string varName)
 
 	while (42)
 	{
-		std::cout << "Enter " + varName + " : ";
+		std::cout << "Enter " + varName + " : " <<std::endl;
 		std::getline(std::cin, prompt);
 		if (prompt.length() > 0)
 		{
@@ -40,7 +40,7 @@ int main (void)
 
 	while (42)
 	{
-		std::cout << "Enter ADD, SEARCH or EXIT : ";
+		std::cout << "Enter ADD, SEARCH or EXIT : " << std::endl;
 		std::getline(std::cin, prompt);
 		if (prompt == "SEARCH")
 		{
@@ -49,7 +49,7 @@ int main (void)
 			{	
 				while (42)
 				{
-					std::cout << "Choose an id : ";
+					std::cout << "Choose an id : " << std::endl;
 					std::getline(std::cin, prompt);
 					if (prompt.length() == 1 && (prompt[0] >= '0' && prompt[0] <= '7'))
 					{					
